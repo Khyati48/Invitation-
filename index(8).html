@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Suman ❤️ Shashi | Wedding Invitation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      /* single stylesheet */
+      *{margin:0;padding:0;box-sizing:border-box}
+      html{scroll-behavior:smooth}
+      body{font-family:'Cormorant Garamond',serif;background:linear-gradient(to bottom,#fffdf8,#fdf7f1,#fffdf8);overflow-x:hidden;color:#8f6670}
+      #petal-container{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:999}
+      .petal{position:absolute;top:-50px;border-radius:50% 0 50% 0;opacity:.85;animation:fall linear forwards}
+      @keyframes fall{0%{transform:translateY(-60px) translateX(0) rotate(0deg);opacity:1}100%{transform:translateY(120vh) translateX(150px) rotate(720deg);opacity:0}}
+      .hero{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px;position:relative}
+      .hero-card{width:100%;max-width:900px;background:rgba(255,255,255,.82);backdrop-filter:blur(12px);border-radius:40px;padding:50px;text-align:center;border:2px solid rgba(212,175,55,.3);box-shadow:0 20px 60px rgba(0,0,0,.08)}
+      .ganesh-img{max-width:140px;height:auto;margin:0 auto 25px auto;display:block;animation:float 3s ease-in-out infinite;filter:drop-shadow(0 4px 8px rgba(0,0,0,0.05))}
+      @keyframes float{50%{transform:translateY(-10px)}}
+      .shlok{font-size:24px;line-height:1.8;color:#7d5f65;font-weight:500}
+      .invite-line{margin-top:25px;font-size:22px;letter-spacing:3px;color:#d4af37}
+      .names{margin-top:40px}
+      .names h1{font-family:'Cinzel',serif;font-size:72px;font-weight:700;color:#a46f78}
+      .and{font-size:60px;margin:10px 0;color:#d4af37}
+      .family{margin-top:30px;font-size:24px;line-height:1.8}
+      .save{padding:100px 20px;text-align:center}
+      .section-title{font-family:'Cinzel',serif;font-size:65px;color:#a46f78;margin-bottom:20px}
+      .gold{color:#d4af37;letter-spacing:6px;font-size:18px;font-weight:600}
+      .scratch-wrapper{position:relative;width:340px;height:240px;margin:50px auto;border-radius:30px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.12);border:3px solid #fff}
+      .date-reveal{width:100%;height:100%;background:white;display:flex;flex-direction:column;justify-content:center;align-items:center}
+      .day{font-size:80px;font-weight:700;color:#a46f78;line-height:1}
+      .month{font-size:40px;font-family:'Cinzel',serif;color:#d4af37;letter-spacing:5px;margin-top:5px}
+      .year{font-size:34px;margin-top:5px;color:#8f6670}
+      #scratchCanvas{position:absolute;inset:0;width:100%;height:100%;touch-action:none;cursor:pointer}
+      .countdown{padding:80px 20px;text-align:center}
+      .timer{display:flex;justify-content:center;flex-wrap:wrap;gap:20px;margin-top:40px}
+      .box{background:white;width:140px;padding:25px;border-radius:25px;box-shadow:0 10px 25px rgba(0,0,0,.08);border:1px solid rgba(212,175,55,.15)}
+      .box span{display:block;font-size:45px;font-weight:700;color:#a46f78}
+      .box small{font-size:18px;letter-spacing:2px;color:#d4af37;font-weight:600}
+      .section{padding:90px 20px;max-width:1100px;margin:auto}
+  /* center section titles and grid items for ceremonies/venue */
+  .section .section-title{ text-align:center; }
+  .section .grid{ justify-items:center; }
+  /* venue card styling - keep layout consistent */
+  .venue-card{ max-width:850px; margin:20px auto; background:white; padding:45px; border-radius:30px; text-align:center; box-shadow:0 15px 35px rgba(0,0,0,.08); border: 1px solid rgba(212,175,55,.1); }
+      .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:25px}
+      .event{background:white;padding:35px;border-radius:30px;text-align:center;box-shadow:0 15px 35px rgba(0,0,0,.08);transition:.3s;border:1px solid rgba(212,175,55,.1)}
+      .music-btn{position:fixed;right:20px;bottom:20px;width:60px;height:60px;border:none;border-radius:50%;background:#d4af37;color:white;font-size:24px;cursor:pointer;z-index:9999;display:flex;align-items:center;justify-content:center;transition:transform .2s}
+      .music-btn:active{transform:scale(.9)}
+      .footer{background:#9b6b72;color:white;padding:70px 20px;text-align:center;margin-top:50px}
+      .footer h2{font-family:'Cinzel',serif;font-size:52px}
+      .footer p{font-size:24px;margin-top:15px}
+      @media(max-width:768px){.names h1{font-size:50px}.section-title{font-size:42px}.hero-card{padding:30px}.box{width:120px}}
+    
+.hero-card{position:relative!important;}
+.top-symbols{
+position:absolute;
+top:15px;
+left:20px;
+right:20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:100;
+}
+.top-symbols span{
+font-size:42px;
+color:#d4af37;
+font-weight:bold;
+text-shadow:0 0 12px rgba(212,175,55,.6);
+}
+
+</style>
+  </head>
+  <body>
+
+    <div id="petal-container"></div>
+    <button class="music-btn" onclick="toggleMusic()" aria-label="Toggle background music">🎵</button>
+
+    <section class="hero">
+      <div class="hero-card">
+        <div class="top-symbols"><span>卐</span><span>卐</span></div>
+  <img class="ganesh-img" src="ganesh.jpg" loading="lazy" alt="Lord Ganesha">
+        <div class="shlok">॥ श्री गणेशाय नमः ॥<br>॥ वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ ॥<br>निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा ॥</div>
+        <div class="invite-line" style="margin-top:22px; font-size:20px;">Smt. Santosh &amp; Late Sh. Roop Chand</div>
+        <div class="invite-line" style="margin-top:18px; font-size:18px;">CORDIALLY INVITE YOU TO THE WEDDING OF THEIR DAUGHTER</div>
+        <div class="names" style="margin-top:22px"><h1>Suman Weds Shashi Bhushan</h1></div>
+        <div class="family" style="margin-top:18px">Son of Late Smt. Raj &amp; Late Sh. Kailash Nath</div>
+      </div>
+    </section>
+
+    
+
+    <section class="save">
+      <div class="gold">SAVE THE DATE</div>
+      <p style="font-size:26px;margin-top:20px; font-style: italic;">Scratch the card below to reveal the date</p>
+      <div class="scratch-wrapper">
+        <div class="date-reveal"><div class="day">09</div><div class="month">JULY</div><div class="year">2026</div></div>
+        <canvas id="scratchCanvas"></canvas>
+      </div>
+    </section>
+
+    <section class="countdown">
+      <h2 class="section-title">Wedding Countdown</h2>
+      <div class="timer">
+        <div class="box"><span id="days">0</span><small>DAYS</small></div>
+        <div class="box"><span id="hours">0</span><small>HOURS</small></div>
+        <div class="box"><span id="minutes">0</span><small>MINUTES</small></div>
+        <div class="box"><span id="seconds">0</span><small>SECONDS</small></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Wedding Ceremonies</h2>
+      <div class="grid">
+        <div class="event"><div class="event-icon">✨</div><h3>Baraat Arriving</h3><p>5:00 PM</p></div>
+        <div class="event"><div class="event-icon">🍽️</div><h3>Dinner</h3><p>7:00 PM</p></div>
+        <div class="event"><div class="event-icon">🎊</div><h3>Wedding Rituals</h3><p>8:00 PM</p></div>
+        <div class="event"><div class="event-icon">🌸</div><h3>Vidai Ceremony</h3><p>9:00 PM</p></div>
+      </div>
+    </section>
+    </section>
+
+    <!-- PRIMARY INVITATION CONTENT BLOCK (inserted) -->
+    <section class="section">
+      <h2 class="section-title">A Special Invitation</h2>
+      <div style="max-width:850px; margin:auto; background:white; padding:50px; border-radius:30px; text-align:center; box-shadow:0 15px 35px rgba(0,0,0,.08); font-size:28px; line-height:1.8; border: 1px solid rgba(212,175,55,.1);">
+        With the blessings of Almighty and our beloved elders,<br>
+        we cordially invite you and your family to grace the auspicious wedding ceremony of
+        <br><br>
+        <b style="font-size:46px; color:#a46f78; font-weight:700; letter-spacing: 1px;">Suman</b>
+        <br>
+        <div style="color:#d4af37; font-size: 32px; margin: 5px 0;">&amp;</div>
+  <b style="font-size:42px; color:#a46f78; font-weight: 700;">Shashi</b>
+        <br><br>
+        Your presence and blessings will make this occasion truly memorable.
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Wedding Venue</h2>
+  <div class="venue-card">
+        <h3 style="font-size:40px; color:#a46f78; margin-bottom:20px; font-weight: 600;">Wedding Celebration</h3>
+        <p style="font-size:26px; line-height:1.8; color: #8f6670;"><strong>Arya Samaj Mandir</strong><br>15, Hanuman Road Area<br>Connaught Place, New Delhi</p>
+        <br>
+  <a href="https://www.google.com/maps/place/Arya+Samaj+Temple,+Connaught+Place,+15,+Hanuman+Rd,+Hanuman+Road+Area,+Connaught+Place,+New+Delhi,+Delhi+110001/data=!4m2!3m1!1s0x390cfd4be7e271a1:0xdd965530143f460f!18m1!1e1?utm_source=mstt_1&entry=gps&coh=192189&g_ep=CAESCDI2LjI0LjEwGAAgiCcqqQEsOTQyNjc3MjcsOTQyOTIxOTUsOTQyOTk1MzIsMTAwNzk2NDk4LDEwMDc5Nzc2MSwxMDA3OTY1MzUsOTQyODA1NzYsMTAwODExOTYwLDk0MjA3Mzk0LDk0MjA3NTA2LDk0MjA4NTA2LDk0MjE4NjUzLDk0MjI5ODM5LDk0Mjc1MTY4LDk0Mjc5NjE5LDEwMDgxNTYzNSwxMDA4MjAyMzcsMTAwODEyOTk4QgJJTg%3D%3D&skid=c96e7d12-1298-45bd-a772-ee931dbf7f70" target="_blank" style="display:inline-block; padding:15px 40px; background:#d4af37; color:white; text-decoration:none; border-radius:40px; font-size:22px; font-weight: 500; box-shadow: 0 6px 15px rgba(212,175,55,0.3);">View Location</a>
+      </div>
+    </section>
+
+    <!-- MANAGEMENT & CONTACT LAYOUT -->
+    <section class="section">
+      <h2 class="section-title">Family Contact</h2>
+      <div class="grid" style="grid-template-columns: 1fr; max-width: 420px; margin: 0 auto;">
+        <div class="event">
+          <div class="event-icon">📞</div>
+          <h3>Vijay Kumar</h3>
+          <p style="font-weight: 600; color: #a46f78; letter-spacing: 1px;">9899245446</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer">
+      <p style="font-size:32px; font-family:'Cinzel', serif; margin-bottom:10px; letter-spacing: 2px;">Awaiting Your Gracious Presence</p>
+      <p style="font-style: italic; opacity: 0.9;">With Love &amp; Blessings</p>
+    </div>
+
+    <!-- music overlay: shown on load to capture a user gesture for autoplay -->
+    <div id="musicOverlay" style="position:fixed;inset:0;background:linear-gradient(135deg,#8f6670,#d4af37);z-index:99999;display:flex;align-items:center;justify-content:center;">
+      <div style="text-align:center;color:white;padding:30px">
+        <p style="font-size:28px;font-weight:600;margin:0;">Tap to open invitation</p>
+      </div>
+    </div>
+
+    <script>
+      (function(){
+        // --- Scratch canvas (DPR-aware) + pointer/touch handling ---
+        const scratchCanvas = document.getElementById('scratchCanvas');
+        const scratchCtx = scratchCanvas.getContext('2d');
+
+        function resizeScratch(){
+          const r = window.devicePixelRatio || 1;
+          const w = scratchCanvas.offsetWidth;
+          const h = scratchCanvas.offsetHeight;
+          scratchCanvas.width = Math.round(w * r);
+          scratchCanvas.height = Math.round(h * r);
+          scratchCanvas.style.width = w + 'px';
+          scratchCanvas.style.height = h + 'px';
+          scratchCtx.setTransform(r,0,0,r,0,0);
+          drawScratchOverlay();
+        }
+
+        function drawScratchOverlay(){
+          // draw the colored overlay and set composite mode so user strokes erase it
+          const w = scratchCanvas.width, h = scratchCanvas.height;
+          const g = scratchCtx.createLinearGradient(0,0,w,h);
+          g.addColorStop(0,'#d8a8b2'); g.addColorStop(1,'#ca8e99');
+          scratchCtx.globalCompositeOperation = 'source-over';
+          scratchCtx.fillStyle = g;
+          scratchCtx.fillRect(0,0,w,h);
+          scratchCtx.fillStyle = 'white';
+          // font size based on CSS pixels, adjust for DPR by using scale of transform
+          scratchCtx.font = 'bold 32px Cinzel';
+          scratchCtx.textAlign = 'center';
+          scratchCtx.textBaseline = 'middle';
+          scratchCtx.fillText('SCRATCH HERE', w/2, h/2);
+          // make sure subsequent strokes erase (destination-out)
+          scratchCtx.globalCompositeOperation = 'destination-out';
+        }
+
+        resizeScratch();
+        window.addEventListener('resize', resizeScratch);
+
+        let isDown = false;
+        let lastPoint = null;
+
+        function getPointFromEvent(e){
+          const rect = scratchCanvas.getBoundingClientRect();
+          const touch = e.touches && e.touches[0];
+          const clientX = touch ? touch.clientX : e.clientX;
+          const clientY = touch ? touch.clientY : e.clientY;
+          return { x: clientX - rect.left, y: clientY - rect.top };
+        }
+
+        function stroke(from, to){
+          const radius = 28;
+          // ensure we are in erase mode
+          scratchCtx.globalCompositeOperation = 'destination-out';
+          scratchCtx.beginPath();
+          scratchCtx.moveTo(from.x, from.y);
+          scratchCtx.lineTo(to.x, to.y);
+          scratchCtx.lineWidth = radius * 2;
+          scratchCtx.lineCap = 'round';
+          scratchCtx.stroke();
+        }
+
+        scratchCanvas.addEventListener('pointerdown', (e)=>{ isDown = true; lastPoint = getPointFromEvent(e); e.preventDefault(); });
+        scratchCanvas.addEventListener('pointermove', (e)=>{
+          if(!isDown) return; e.preventDefault(); const p = getPointFromEvent(e);
+          if(lastPoint) stroke(lastPoint, p); else { scratchCtx.beginPath(); scratchCtx.arc(p.x,p.y,28,0,Math.PI*2); scratchCtx.fill(); }
+          lastPoint = p; checkClearDebounced();
+        });
+        scratchCanvas.addEventListener('pointerup', ()=>{ isDown = false; lastPoint = null; });
+        scratchCanvas.addEventListener('pointercancel', ()=>{ isDown = false; lastPoint = null; });
+        scratchCanvas.addEventListener('touchstart', (e)=>{ e.preventDefault(); }, {passive:false});
+
+        function getTransparentRatio(){
+          try{
+            const img = scratchCtx.getImageData(0,0,scratchCanvas.width,scratchCanvas.height).data;
+            let transparent = 0;
+            for(let i=3; i<img.length; i+=4) if(img[i] === 0) transparent++;
+            return transparent / (scratchCanvas.width * scratchCanvas.height);
+          }catch(err){ return 0; }
+        }
+
+        function debounce(fn, ms){ let t; return function(){ clearTimeout(t); t = setTimeout(fn, ms); }; }
+        const checkClearDebounced = debounce(()=>{
+          if(getTransparentRatio() > 0.45){
+            scratchCanvas.style.transition = 'opacity .6s';
+            scratchCanvas.style.opacity = '0';
+            setTimeout(()=>{ if(scratchCanvas && scratchCanvas.parentNode) scratchCanvas.parentNode.removeChild(scratchCanvas); }, 700);
+          }
+        }, 400);
+
+        // --- Countdown ---
+        const targetDate = new Date('July 09, 2026 00:00:00').getTime();
+        function updateCountdown(){
+          const now = Date.now(); const d = Math.max(0, targetDate - now);
+          const days = Math.floor(d / (1000*60*60*24));
+          const hours = Math.floor((d % (1000*60*60*24)) / (1000*60*60));
+          const minutes = Math.floor((d % (1000*60*60)) / (1000*60));
+          const seconds = Math.floor((d % (1000*60)) / 1000);
+          document.getElementById('days').textContent = days;
+          document.getElementById('hours').textContent = hours;
+          document.getElementById('minutes').textContent = minutes;
+          document.getElementById('seconds').textContent = seconds;
+        }
+        updateCountdown(); setInterval(updateCountdown, 1000);
+
+        // --- Petals ---
+        const petalContainer = document.getElementById('petal-container');
+        function createPetal(){
+          const el = document.createElement('div'); el.className = 'petal';
+          const s = Math.random()*15 + 10; el.style.width = s + 'px'; el.style.height = (s*1.4) + 'px';
+          el.style.left = Math.random() * window.innerWidth + 'px';
+          el.style.background = ['#f8d9d9','#f3d3d3','#eec9c9','#ead8b5'][Math.floor(Math.random()*4)];
+          el.style.animationDuration = (Math.random()*6 + 8) + 's';
+          petalContainer.appendChild(el);
+          setTimeout(()=>{ el.remove(); }, 15000);
+        }
+        setInterval(createPetal, 250);
+
+        // --- Music handling (robust for phones & laptops) ---
+        // Create audio element programmatically with mobile-friendly attributes
+        const bgMusic = document.createElement('audio');
+        bgMusic.src = 'salma.mp3';
+        bgMusic.preload = 'auto';
+        bgMusic.loop = true;
+        // help iOS/older WebKit allow inline playback
+        try{ bgMusic.setAttribute('playsinline',''); bgMusic.setAttribute('webkit-playsinline',''); }catch(e){}
+        bgMusic.crossOrigin = 'anonymous';
+
+        const musicOverlay = document.getElementById('musicOverlay');
+        const musicBtn = document.querySelector('.music-btn');
+
+        function hideMusicOverlay(){
+          if(!musicOverlay) return;
+          musicOverlay.style.transition = 'opacity .35s'; musicOverlay.style.opacity = '0';
+          setTimeout(()=>{ if(musicOverlay && musicOverlay.parentNode) musicOverlay.parentNode.removeChild(musicOverlay); }, 400);
+        }
+
+        function updateMusicButton(playing){
+          if(musicBtn) musicBtn.textContent = playing ? '⏸' : '🎵';
+          if(musicBtn) musicBtn.setAttribute('aria-pressed', playing ? 'true' : 'false');
+        }
+
+        async function startMusicFromGesture(){
+          try{
+            await bgMusic.play();
+            updateMusicButton(true);
+          }catch(err){
+            // Some browsers may still block; keep UI responsive
+            console.warn('Music play blocked:', err);
+          }
+          hideMusicOverlay();
+        }
+
+        // Attach a few gesture events to maximize compatibility on mobile & desktop
+        if(musicOverlay){
+          const onceHandler = function onceStart(){ startMusicFromGesture(); ['click','touchend','pointerdown'].forEach(ev=>musicOverlay.removeEventListener(ev, onceStart)); };
+          ['click','touchend','pointerdown'].forEach(ev=> musicOverlay.addEventListener(ev, onceHandler, {passive:true}));
+        }
+
+        window.toggleMusic = async function(){
+          if(bgMusic.paused){
+            try{ await bgMusic.play(); updateMusicButton(true); }catch(e){ console.warn('toggle play blocked', e); }
+          }else{
+            bgMusic.pause(); updateMusicButton(false);
+          }
+        };
+
+        bgMusic.addEventListener('play', ()=> updateMusicButton(true));
+        bgMusic.addEventListener('pause', ()=> updateMusicButton(false));
+        bgMusic.addEventListener('ended', ()=> updateMusicButton(false));
+        bgMusic.addEventListener('error', (e)=>{ console.error('Audio error', e); if(musicBtn) musicBtn.title='Audio failed to load'; });
+
+        // Pause on tab hidden and resume if it was playing before
+        let wasPlayingBeforeHidden = false;
+        document.addEventListener('visibilitychange', ()=>{
+          if(document.hidden){ wasPlayingBeforeHidden = !bgMusic.paused; if(!bgMusic.paused) bgMusic.pause(); }
+          else { if(wasPlayingBeforeHidden){ bgMusic.play().catch(()=>{}); wasPlayingBeforeHidden = false; } }
+        });
+
+      })();
+    </script>
+
+  </body>
+</html>
